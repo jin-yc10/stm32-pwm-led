@@ -32,7 +32,7 @@ endif
 #CFLAGS += -mfloat-abi=hard
 CFLAGS += -ffreestanding -nostdlib
 CFLAGS += -I./ -ISTM32F10x_StdPeriph_Driver/inc -I../
-CFLAGS += -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD
+CFLAGS += -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
 
 #SRCS  = stm32f4_discovery.c
 SRCS = misc.c stm32f10x_dma.c stm32f10x_rcc.c stm32f10x_adc.c \

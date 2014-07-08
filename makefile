@@ -35,8 +35,8 @@ vpath %.a lib
 
 ROOT=$(shell pwd)
 
-CFLAGS += -Ialgorithm -Idriver -Iothers -Ilib -Ilib/STM32F10x_StdPeriph_Driver/inc -I./ -I$(ARM_STD_PATH)
-CFLAGS += -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD
+CFLAGS += -Iled -Ilib -Ilib/STM32F10x_StdPeriph_Driver/inc -I./ -I$(ARM_STD_PATH)
+CFLAGS += -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
 
 SRCS += lib/startup_stm32f10x_hd.s # add startup file to build hd for f107 with 256kb flash
 
