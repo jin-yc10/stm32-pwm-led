@@ -1,7 +1,7 @@
 
 MPU = cortex-m3
 
-SRCS =  main.c stm32f10x_it.c led.c
+SRCS =  main.c pwm.c stm32f10x_it.c led.c
 
 PROJ_NAME = pwm_led
 OUTPATH = build
@@ -30,12 +30,12 @@ else
 CFLAGS += -msoft-float
 endif
 
-vpath %.c ./ ./led
+vpath %.c ./ ./led ./pwm
 vpath %.a lib
 
 ROOT=$(shell pwd)
 
-CFLAGS += -Iled -Ilib -Ilib/STM32F10x_StdPeriph_Driver/inc -I./ -I$(ARM_STD_PATH)
+CFLAGS += -Iled -Ipwm -Ilib -Ilib/STM32F10x_StdPeriph_Driver/inc -I./ -I$(ARM_STD_PATH)
 CFLAGS += -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
 
 SRCS += lib/startup_stm32f10x_hd.s # add startup file to build hd for f107 with 256kb flash

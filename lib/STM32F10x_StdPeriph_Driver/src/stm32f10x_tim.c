@@ -831,7 +831,7 @@ void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState)
 void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState)
 {
   /* Check the parameters */
-  assert_param(IS_TIM_LIST2_PERIPH(TIMx));
+  //assert_param(IS_TIM_LIST2_PERIPH(TIMx));
   assert_param(IS_FUNCTIONAL_STATE(NewState));
   if (NewState != DISABLE)
   {
